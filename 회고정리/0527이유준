@@ -1,0 +1,98 @@
+### 7.3 HTTPSession 예제
+---
+## 8. 다양한 요청 처리
+### 8.1 RequestMapping 및 다양한 HTTP 메소드 처리 
+1. @GetMapping
+2. @PostMapping
+
+>`@RequestMapping` : 요청 URL을 컨트롤러의 특정 메서드에 매핑하는 데 사용.
+>				HTTP 요청 *(Get, POST, DELETE, PUT 등)* 을 특정 메서드에 연결 가능.
+
+#### GET/POST 이해하기
+##### GET
++ URL에 데이터를 포함시켜 요청
++ 데이터를 **헤더**에 포함하여 전송
++ URL에 데이터가 노출되어 보안에 취약
++ 캐싱 가능
+=> *주로 조회할 때만 사용*
+##### POST
++ URL에 데이터를 노출하지 않고 요청
++ 데이터를 **바디**에 포함
++ URL에 데이터가 노출되지 않아 GET 방식보다 보안이 높음
++ 캐싱 불가능
+=> *주로 노출되면 안 되는 데이터를 저장할 때 사용*
+#### PostMapping/GetMapping
+##### @PostMapping
+HTTP Post Method에 해당하는 단축 표현으로, 서버에 리소스를 **등록(저장)** 할 때 사용함.
+##### @GetMapping
+HTTP Get Method에 해당하는 단축 표현으로, 서버의 리소스를 **조회**할 때 사용함.
+### 8.1.1 기본 사용법
+```java
+@RequestMapping(value = "/example", method = RequestMethod.GET) 
+public String getExample() { 
+	return "exampleGet"; 
+}
+```
+> `@RequestMapping` : "/example" 경로 오는 GET 요청을 `getExample` 메서드에 매핑
+
+---
+## 9. 뷰 리졸버 구성 및 커스터마이징
+>`뷰 리졸버(View Resolver)` 
+> 	MVC 패턴에서 컨트롤러가 처리를 마친 후에 반환된 뷰 이름을 기반으로 실제 뷰를 찾아내고, 렌더링을 위한 뷰 객체를 반환하는 역할을 함.
+>	
+>	 뷰 템플릿 엔진의 인스턴스를 사용하여 요청된 데이터를 HTML, JSON, XML 등의 형태로 변환.
+
+
+#### View Resolver 역할
+* `뷰 이름 해석` : 컨트롤러가 반환하는 뷰 이름(예 : "home")을 실제 뷰 리소스 (예 : "home.html")로 매핑  
+* `뷰 객체 생성` : 요청에 맞는 뷰 객체를 생성하고 구성.
+* `다중 뷰 리졸버 지원` : 다양한 유형의 뷰를 처리할 수 있도록 여러 뷰 리졸버를 순서대로 배치 가능.
+
+>[!note]- 뷰 이름의 매핑
+>컨트롤러 -> 특정 뷰를 식별하기 위해 문자열 형태의 뷰 이름 반환.    
+>뷰 리졸버 -> 문자열 형태의 뷰 이름을 실제 뷰 템플릿 파일로 매핑.
+>	ex ) 컨트롤러가 "home" 이라는 뷰 이름을 반환하면, 뷰 리졸버는 이를 "home.jsp"나 "home.html"같은 실제 파일로 변환 가능.
+
+
+
+>[!warning] 뷰 리졸버는 이해 안 돼도 넘어가도 된다 하심..
+
+---
+## 10. 에러 페이지 처리
+> **Spring Boot**와 **Thymeleaf**를 사용하여 오류가 발생할 때 `error.html` 페이지를 자동으로 보여주고, 오류 메시지를 별도로 로그로 남기는 방법에 대하여.
+```java
+@ControllerAdvice 
+public class GlobalExceptionHandler { 
+	private static final Logger logger =
+		LoggerFactory.getLogger(GlobalExceptionHandler.class);
+	
+	@ExceptionHandler(Exception.class) 
+	public ModelAndView handleException(Exception e, Model model) {
+		logger.error("Server Error: ", e); // 로그에 에러를 기록
+		model.addAttribute("errorMessage", e.getMessage()); 
+		return new ModelAndView("error"); 
+	} 
+}
+```
+### @ExceptionHandler
+* `@ExceptionHandler`을 사용하면 value로 원하는 예외를 지정하고 이를 핸들링 할 수 있음.
+* 예외에 대한 세부적인 정보 또한 응답으로 전달 가능.
+	```java
+	// Ex)
+	@ExceptionHandler(value = illegalArgumentException.class)
+	```
+* `@ExceptionHandler`는 코드를 작성한 컨트롤러에서만 발생하는 예외만 처리된다.
+>[!warning] 만약 같은 예외에 대해 여러 컨트롤러에서 같은 처리를 하고 싶다면, 컨트롤러마다 같은 메서드를 작성해 주어야 함.
+>-> 코드의 중복 발생
+
+### @ControllerAdvice
+* `@ControllerAdvice`는 `@Component` 어노테이션의 특수한 케이스로, 스프링 부트 애플리케이션에서 **전역적으로 예외를 핸들링** 할 수 있게 해주는 어노테이션임.
+	-> 코드의 중복 해결 가능  
+* 하나의 클래스 내에서 **정상 동작 시** 호출되는 코드와 **예외를 처리하는** 코드를 분리할 수 있음.
+
+* `@ControllerAdvice` 또한 Bean으로 관리된다.
+
+
+
+
+
