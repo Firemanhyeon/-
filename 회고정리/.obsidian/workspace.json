@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "2dbf3fa136b7828c",
+    "type": "split",
+    "children": [
+      {
+        "id": "17342cb75cac8c8a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17d2a2aa1ddbff06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0529변혜빈_mappedBy.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61f683e193a90c6b",
+    "type": "split",
+    "children": [
+      {
+        "id": "7648876765af7d12",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65403013ec1b2963",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e292fb467819af38",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "17285e7fee6ef650",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229.5
+  },
+  "right": {
+    "id": "9c985f5233fcd4e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb5f3a57d2eba425",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd45eab8662538c0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0529변혜빈_mappedBy.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "faf97fba1c40dfe1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0529변혜빈_mappedBy.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fffae13a2321441d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e91fd0fd14e70b47",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "0529변혜빈_mappedBy.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "17d2a2aa1ddbff06",
+  "lastOpenFiles": [
+    "0529변혜빈_Hibernate.md",
+    "0529변혜빈_EntityManager.md",
+    "0529변혜빈.md",
+    "resources/Pasted image 20240529125810.png",
+    "resources/Pasted image 20240529113056.png",
+    "resources/Pasted image 20240529093533.png",
+    "resources/Pasted image 20240529081115.png"
+  ]
+}
