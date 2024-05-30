@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0530정호현.md",
+                "file": "게시판 프로젝트 팀 발표 자료.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0530정호현.md",
+                "file": "게시판 프로젝트 팀 발표 자료.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0530정호현.md",
+                "file": "게시판 프로젝트 팀 발표 자료.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0530정호현.md"
+                "file": "게시판 프로젝트 팀 발표 자료.md"
               }
             }
           }
@@ -149,12 +149,16 @@
   },
   "active": "17d2a2aa1ddbff06",
   "lastOpenFiles": [
+    "0522정호현.md",
+    "0527이유준.md",
+    "0528이나연.md",
+    "0528최혜진.md",
+    "0529변혜빈.md",
     "게시판 프로젝트 팀 발표 자료.md",
     "0530정호현.md",
     "0529변혜빈_mappedBy.md",
     "0529변혜빈_Hibernate.md",
     "0529변혜빈_EntityManager.md",
-    "0529변혜빈.md",
     "resources/Pasted image 20240529125810.png",
     "resources/Pasted image 20240529113056.png",
     "resources/Pasted image 20240529093533.png",
