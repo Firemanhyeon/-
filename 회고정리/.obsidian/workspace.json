@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "게시판 프로젝트 팀 발표 자료.md",
+                "file": "0530정호현.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "게시판 프로젝트 팀 발표 자료.md",
+                "file": "0530정호현.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "게시판 프로젝트 팀 발표 자료.md",
+                "file": "0530정호현.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "게시판 프로젝트 팀 발표 자료.md"
+                "file": "0530정호현.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "17d2a2aa1ddbff06",
   "lastOpenFiles": [
+    "게시판 프로젝트 팀 발표 자료.md",
     "0530정호현.md",
     "0529변혜빈_mappedBy.md",
     "0529변혜빈_Hibernate.md",
